@@ -14,10 +14,10 @@ my_cursor.execute("create table Students(ROLLNO INT PRIMARY KEY,NAME VARCHAR (10
 print("TABLE CREATED SUCCESSFULLY")
 
 def add_details():
-    rollno=int(input("Enter ROLLNO: "))
-    name=input("Enter Name: ")
-    mobileno=input("Enter Mobile Number: ")
-    city=input("Enter City: ")
+    rollno=int(input("Enter ROLLNO : "))
+    name=input("Enter Name : ")
+    mobileno=input("Enter Mobile Number : ")
+    city=input("Enter City : ")
     course=input("Enter Course: ")
     query="insert into students values (%s,%s,%s,%s,%s)"
     values=(rollno,name,mobileno,city,course)
@@ -26,11 +26,11 @@ def add_details():
     print("Student Added Successfully")
 
 def update_details():
-    name=input("Enter Name: ")
-    mobileno=input("Enter Mobile Number: ")
-    city=input("Enter City: ")
-    course=input("Enter Course: ")
-    rollno=int(input("Enter ROLLNO: "))
+    name=input("Enter Name : ")
+    mobileno=input("Enter Mobile Number : ")
+    city=input("Enter City : ")
+    course=input("Enter Course : ")
+    rollno=int(input("Enter ROLLNO : "))
     query="update students set name=%s,mobileno=%s,city=%s,course=%s where rollno=%s"
     values=(name,mobileno,city,course,rollno)
     my_cursor.execute(query,values)
