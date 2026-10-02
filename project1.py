@@ -18,7 +18,7 @@ def add_details():
     name=input("Enter Name : ")
     mobileno=input("Enter Mobile Number : ")
     city=input("Enter City : ")
-    course=input("Enter Course: ")
+    course=input("Enter Course : ")
     query="insert into students values (%s,%s,%s,%s,%s)"
     values=(rollno,name,mobileno,city,course)
     my_cursor.execute(query,values)
@@ -44,7 +44,7 @@ def view_all():
         print(row)
 
 def delete_student_details():
-    rollno=int(input("Enter Rollno to delete: "))
+    rollno=int(input("Enter Rollno to delete : "))
     query="delete from students where rollno=%s"
     values=(rollno,)
     my_cursor.execute(query,values)
